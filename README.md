@@ -24,7 +24,7 @@
     var data = ''
     res.on('data', (chunk) => { data += chunk })
     res.on('end', () => {
-      console.log(JSON.parse(data)) → { hello: 'world' }
+      console.log(JSON.parse(data)) // → { hello: 'world' }
     })
   }).end()
 ```
