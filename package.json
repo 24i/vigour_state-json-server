@@ -1,0 +1,44 @@
+{
+  "name": "vigour-state-json-server",
+  "version": "0.0.1",
+  "description": "Simple json server for state objects",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "node test | tap-difflet && standard",
+    "watch": "nodemon test | tap-difflet",
+    "cover": "istanbul cover --report none --print detail test/index.js",
+    "docs": "node_modules/vigour-doc/bin/vdoc",
+    "travis": "npm run cover -s && istanbul report lcov && ((cat coverage/lcov.info | coveralls) || exit 0) && standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vigour-io/state-json-server.git"
+  },
+  "keywords": [
+    "javascript",
+    "server",
+    "json",
+    "simple",
+    "state"
+  ],
+  "author": "Vigour.io <dev@vigour.io>",
+  "license": "ICS",
+  "bugs": {
+    "url": "https://github.com/vigour-io/state-json-server/issues"
+  },
+  "dependencies": {
+    "vigour-stamp": "^1.1.1"
+  },
+  "devDependencies": {
+    "tape": "^4.4.0",
+    "tap-difflet": "0.4.0",
+    "nodemon": "^1.9.1",
+    "coveralls": "^2.11.9",
+    "istanbul": "^0.4.3",
+    "vigour-doc": "^1.0.5",
+    "standard": "^7.0.1",
+    "pre-commit": "^1.1.3",
+    "vigour-state": "^4.0.0"
+  },
+  "homepage": "https://github.com/vigour-io/state-json-server#readme"
+}
