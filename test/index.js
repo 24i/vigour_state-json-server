@@ -39,7 +39,7 @@ test('server state', (t) => {
 
   input[step]()
 
-  function doRequest() {
+  function doRequest () {
     http.request({
       host: 'localhost',
       port: port,
