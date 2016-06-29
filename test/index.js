@@ -19,7 +19,8 @@ test('server state', (t) => {
       nest: {
         a: {
           b: {
-            c: 'c'
+            c: 'c',
+            secret: 'hello'
           }
         }
       }
@@ -35,7 +36,11 @@ test('server state', (t) => {
 
   t.plan(results.length)
 
-  const server = createServer(state, port)
+  const server = createServer(
+    state,
+    port,
+    false, (prop) => prop.key !== 'secret'
+  )
 
   input[step]()
 

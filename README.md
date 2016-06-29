@@ -13,8 +13,14 @@
   const s = require('vigour-state/s')
   const state = s({ hello: 'world' })
   const http = require('http')
-  // state, port, queuing-interval
-  const server = createServer(state, 8080, 100)
+  // state, port, queuing-interval, filter
+  const server = createServer(
+    state,
+    8080,
+    100,
+    // filters response
+    (prop) => prop.key !== 'secrect'
+  )
 
   //example request
   http.request({
