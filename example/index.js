@@ -4,7 +4,7 @@ const freeport = require('freeport')
 
 const s = require('vigour-state/s')
 const state = s({ example: true })
-setInterval(() => state.set({ rnd: Math.random() }), 10)
+setInterval(() => state.set({ rnd: Math.random() }), 10e3)
 
 freeport((err, port) => {
   if (err) { throw err }
