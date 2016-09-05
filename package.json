@@ -4,6 +4,7 @@
   "description": "Simple json server for state objects",
   "main": "lib/index.js",
   "scripts": {
+    "start": "node test/server",
     "test": "node test | tap-difflet && standard",
     "watch": "nodemon test | tap-difflet",
     "cover": "istanbul cover --report none --print detail test/index.js",
