@@ -5,7 +5,7 @@ var urls = {
   local: 'http://10.0.2.2:9000/',
   ngrok: 'http://d4bf0602.ngrok.io',
   sbs: 'https://vier-json.vigour.io',
-  now: 'https://vigour-state-json-server-ouwozsolnm.now.sh/'
+  now: 'https://vigour-iosbs-json-server-ibarnofoec.now.sh/'
 }
 
 doGet('local')
