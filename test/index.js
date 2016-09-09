@@ -59,7 +59,6 @@ test('server state', (t) => {
       var str = ''
       res.on('data', (chunk) => { str += chunk.toString() })
       res.on('end', () => {
-        console.log('got data?', str)
         t.same(JSON.parse(str), results[step], 'correct respone case:' + step)
         if (step !== input.length - 1) {
           step++
