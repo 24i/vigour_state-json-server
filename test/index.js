@@ -9,13 +9,19 @@ test('server state', (t) => {
   var step = 0
   const state = s()
 
+  const big = {}
+  for (let i = 0; i < 1e4; i++) {
+    big['x' + i] = i
+  }
+
   const results = [
-    { nest: { a: { b: { c: 'c' } } } },
-    { nest: { a: { b: { c: 'd' } } }, x: true }
+    { big, nest: { a: { b: { c: 'c' } } } },
+    { big, nest: { a: { b: { c: 'd' } } }, x: true }
   ]
 
   const input = [
     () => state.set({
+      big,
       nest: {
         a: {
           b: {
