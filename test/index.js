@@ -5,7 +5,7 @@ const createServer = require('../')
 const http = require('http')
 const port = 8888 // use freeport more clean
 
-test.skip('server state', (t) => {
+test('server state', (t) => {
   var step = 0
   const state = s()
 
@@ -57,7 +57,7 @@ test.skip('server state', (t) => {
       method: 'GET'
     }, (res) => {
       var str = ''
-      res.on('data', (chunk) => { str += chunk })
+      res.on('data', (chunk) => { str += chunk.toString() })
       res.on('end', () => {
         console.log('got data?', str)
         t.same(JSON.parse(str), results[step], 'correct respone case:' + step)
