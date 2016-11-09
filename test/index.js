@@ -1,4 +1,5 @@
 'use strict'
+
 const test = require('tape')
 const s = require('vigour-state/s')
 const createServer = require('../')
