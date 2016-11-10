@@ -28,6 +28,8 @@
     "url": "https://github.com/vigour-io/state-json-server/issues"
   },
   "dependencies": {
+    "lodash.get": "^4.4.2",
+    "lodash.setwith": "^4.3.2",
     "vigour-stamp": "^1.1.1"
   },
   "devDependencies": {

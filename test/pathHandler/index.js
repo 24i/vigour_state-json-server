@@ -9,7 +9,7 @@ const port = 8888 // use freeport more clean
 // const set = require('lodash.set')
 
 const createServer = require('../../')
-const pathHandler = require('../../lib/path-handler').handle
+const pathHandler = require('../../path-handler').handle
 
 test('pathHandler - get paths by depth over refs', (t) => {
   const setObj = {
