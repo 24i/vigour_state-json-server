@@ -12,11 +12,9 @@ for (let i = 0; i < 1e4; i++) {
   big['x' + i] = i
 }
 
-const server = createServer( // eslint-disable-line
-  state,
-  port,
-  false, (prop) => prop.key !== 'secret'
-)
+const server = createServer({ // eslint-disable-line
+  state, port, filter: (prop) => prop.key !== 'secret'
+})
 
 function doRequest (fn) {
   http.request({
