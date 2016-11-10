@@ -23,6 +23,7 @@ function parse (state, depth, filter, result, target) {
   if (!result) {
     result = {}
   }
+  if (!state) { return result }
   if (!target) {
     /* starting from a fresh path */
     const path = state.path()
