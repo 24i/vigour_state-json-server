@@ -111,7 +111,10 @@ test('pathHandler - respect filter', (t) => {
       }
     }
   })
-  const server = createServer({ state, port, pathHandler,
+  const server = createServer({
+    state,
+    port,
+    pathHandler,
     filter: prop => !('sync' in prop) || prop.sync.compute()
   })
 
