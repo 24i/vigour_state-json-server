@@ -1,6 +1,6 @@
 {
   "name": "vigour-state-json-server",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Simple json server for state objects",
   "main": "lib/index.js",
   "scripts": {
