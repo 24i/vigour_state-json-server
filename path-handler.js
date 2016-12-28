@@ -51,8 +51,8 @@ function parse (state, depth, filter, result, target) {
 function populate (state, depth, filter, result, target) {
   const nextDepth = depth && depth - 1
   state.each((p, key) => {
-    if (!filter || filter(p)) {
-      if ('val' in p) {
+    if (p && (!filter || filter(p))) {
+      if (p.val !== void 0) {
         let val = p.val
         let sendVal
         if (val && val.isBase) {
