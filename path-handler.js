@@ -8,8 +8,8 @@ const querystring = require('querystring')
 exports.handle = pathHandler
 exports.parse = parse
 
-function pathHandler (state, url, filter) {
-  url = urlTool.parse(url)
+function pathHandler (state, req, filter) {
+  const url = urlTool.parse(req.url)
   const path = url.pathname.slice(1).split('/')
   const query = querystring.parse(url.query)
   const start = state.get(path)
